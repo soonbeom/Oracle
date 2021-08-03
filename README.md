@@ -104,6 +104,36 @@ resource : 개체를 생성 할 수 있는 권한
     drop user user04 cascade
   
   
+# CMD 기초
+
+●계정 만들기
+
+	 create user 아이디 identified by 비번;
+
+●권한 주기
+
+	grant connect, resource to 아이디;
+
+●테이블 만들기
+
+	CREATE TABLE MEMBER(
+
+	username varchar2(10) primary key,
+
+	password varchar2(10) not null,
+
+	name nvarchar2(10),
+
+	postdate date);
+
+●시퀀스 만들기
+
+	CREATE SEQUENCE SEQ_MEMBER
+
+	NOCACHE
+
+	NOCYCLE;
+
 # PL/SQL
 
 ●프로그래밍 언어의 특성을 수용한 SQL의 확장
